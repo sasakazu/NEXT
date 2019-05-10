@@ -19,10 +19,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="NEXT" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1g-Wj-ZTP">
-                                <rect key="frame" x="153" y="422.5" width="108" height="51.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="43"/>
+                                <rect key="frame" x="121.5" y="407" width="171" height="82.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="69"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <size key="shadowOffset" width="0.0" height="0.0"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
