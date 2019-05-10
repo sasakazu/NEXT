@@ -99,7 +99,6 @@
 				D46364E59047630B3C077E11 /* Pods-NEXTUITests.debug.xcconfig */,
 				081506B9279CF943A98921AE /* Pods-NEXTUITests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -130,6 +129,9 @@
 			children = (
 				7300B8192285350300BD6FA9 /* AppDelegate.swift */,
 				7300B81B2285350300BD6FA9 /* ViewController.swift */,
+				7300B84722856AB600BD6FA9 /* NEXT */,
+				7300B84822856AD000BD6FA9 /* アイデアストック */,
+				7300B84922856AE800BD6FA9 /* Qiitaで質問 */,
 				7300B81D2285350300BD6FA9 /* Main.storyboard */,
 				7300B8202285350400BD6FA9 /* Assets.xcassets */,
 				7300B8222285350400BD6FA9 /* LaunchScreen.storyboard */,
@@ -154,6 +156,29 @@
 				7300B83B2285350500BD6FA9 /* Info.plist */,
 			);
 			path = NEXTUITests;
+			sourceTree = "<group>";
+		};
+		7300B84722856AB600BD6FA9 /* NEXT */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NEXT;
+			sourceTree = "<group>";
+		};
+		7300B84822856AD000BD6FA9 /* アイデアストック */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "アイデアストック";
+			path = "アイデアストック";
+			sourceTree = "<group>";
+		};
+		7300B84922856AE800BD6FA9 /* Qiitaで質問 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Qiitaで質問";
+			path = "Qiitaで質問";
 			sourceTree = "<group>";
 		};
 		F400E51624E7EEF8E1D441AC /* Frameworks */ = {
