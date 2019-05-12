@@ -16,6 +16,13 @@
 		7300B8242285350400BD6FA9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7300B8222285350400BD6FA9 /* LaunchScreen.storyboard */; };
 		7300B82F2285350500BD6FA9 /* NEXTTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7300B82E2285350500BD6FA9 /* NEXTTests.swift */; };
 		7300B83A2285350500BD6FA9 /* NEXTUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7300B8392285350500BD6FA9 /* NEXTUITests.swift */; };
+		7300B8852287D33700BD6FA9 /* nextMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7300B8842287D33700BD6FA9 /* nextMain.swift */; };
+		7300B8872287D36D00BD6FA9 /* nextAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7300B8862287D36D00BD6FA9 /* nextAdd.swift */; };
+		7300B8892287D3AD00BD6FA9 /* nextDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7300B8882287D3AD00BD6FA9 /* nextDetail.swift */; };
+		7300B88B2287D40000BD6FA9 /* question.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7300B88A2287D40000BD6FA9 /* question.swift */; };
+		7300B8912287D58F00BD6FA9 /* ideaPaint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7300B8902287D58F00BD6FA9 /* ideaPaint.swift */; };
+		7300B8932287D96500BD6FA9 /* ideaCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7300B8922287D96500BD6FA9 /* ideaCollection.swift */; };
+		7300B8962287D9C400BD6FA9 /* object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7300B8952287D9C400BD6FA9 /* object.swift */; };
 		B3B1D04BCAB7609A3D366FDE /* Pods_NEXTUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 970CEA5A5EF7CA781FE3AA1A /* Pods_NEXTUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +62,13 @@
 		7300B8352285350500BD6FA9 /* NEXTUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NEXTUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7300B8392285350500BD6FA9 /* NEXTUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NEXTUITests.swift; sourceTree = "<group>"; };
 		7300B83B2285350500BD6FA9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7300B8842287D33700BD6FA9 /* nextMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nextMain.swift; sourceTree = "<group>"; };
+		7300B8862287D36D00BD6FA9 /* nextAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nextAdd.swift; sourceTree = "<group>"; };
+		7300B8882287D3AD00BD6FA9 /* nextDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = nextDetail.swift; sourceTree = "<group>"; };
+		7300B88A2287D40000BD6FA9 /* question.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = question.swift; sourceTree = "<group>"; };
+		7300B8902287D58F00BD6FA9 /* ideaPaint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ideaPaint.swift; sourceTree = "<group>"; };
+		7300B8922287D96500BD6FA9 /* ideaCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ideaCollection.swift; path = "/Users/sasakurakazuya/Dropbox/ios/NEXT/NEXT/アイデアストック/ideaCollection.swift"; sourceTree = "<absolute>"; };
+		7300B8952287D9C400BD6FA9 /* object.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = object.swift; sourceTree = "<group>"; };
 		970CEA5A5EF7CA781FE3AA1A /* Pods_NEXTUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NEXTUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A9F2113A134BCD732F79F21 /* Pods-NEXT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NEXT.release.xcconfig"; path = "Target Support Files/Pods-NEXT/Pods-NEXT.release.xcconfig"; sourceTree = "<group>"; };
 		C5C8ECC6F6AE7DC4DD59719C /* Pods_NEXT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NEXT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -129,6 +143,7 @@
 			children = (
 				7300B8192285350300BD6FA9 /* AppDelegate.swift */,
 				7300B81B2285350300BD6FA9 /* ViewController.swift */,
+				7300B8942287D99600BD6FA9 /* Database */,
 				7300B84722856AB600BD6FA9 /* NEXT */,
 				7300B84822856AD000BD6FA9 /* アイデアストック */,
 				7300B84922856AE800BD6FA9 /* Qiitaで質問 */,
@@ -161,6 +176,9 @@
 		7300B84722856AB600BD6FA9 /* NEXT */ = {
 			isa = PBXGroup;
 			children = (
+				7300B8842287D33700BD6FA9 /* nextMain.swift */,
+				7300B8862287D36D00BD6FA9 /* nextAdd.swift */,
+				7300B8882287D3AD00BD6FA9 /* nextDetail.swift */,
 			);
 			path = NEXT;
 			sourceTree = "<group>";
@@ -168,6 +186,8 @@
 		7300B84822856AD000BD6FA9 /* アイデアストック */ = {
 			isa = PBXGroup;
 			children = (
+				7300B8922287D96500BD6FA9 /* ideaCollection.swift */,
+				7300B8902287D58F00BD6FA9 /* ideaPaint.swift */,
 			);
 			name = "アイデアストック";
 			path = "アイデアストック";
@@ -176,9 +196,18 @@
 		7300B84922856AE800BD6FA9 /* Qiitaで質問 */ = {
 			isa = PBXGroup;
 			children = (
+				7300B88A2287D40000BD6FA9 /* question.swift */,
 			);
 			name = "Qiitaで質問";
 			path = "Qiitaで質問";
+			sourceTree = "<group>";
+		};
+		7300B8942287D99600BD6FA9 /* Database */ = {
+			isa = PBXGroup;
+			children = (
+				7300B8952287D9C400BD6FA9 /* object.swift */,
+			);
+			path = Database;
 			sourceTree = "<group>";
 		};
 		F400E51624E7EEF8E1D441AC /* Frameworks */ = {
@@ -419,8 +448,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7300B8872287D36D00BD6FA9 /* nextAdd.swift in Sources */,
+				7300B8892287D3AD00BD6FA9 /* nextDetail.swift in Sources */,
 				7300B81C2285350300BD6FA9 /* ViewController.swift in Sources */,
+				7300B8912287D58F00BD6FA9 /* ideaPaint.swift in Sources */,
 				7300B81A2285350300BD6FA9 /* AppDelegate.swift in Sources */,
+				7300B8852287D33700BD6FA9 /* nextMain.swift in Sources */,
+				7300B8932287D96500BD6FA9 /* ideaCollection.swift in Sources */,
+				7300B88B2287D40000BD6FA9 /* question.swift in Sources */,
+				7300B8962287D9C400BD6FA9 /* object.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
