@@ -12,15 +12,17 @@ import RealmSwift
 class nextMain: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var nextItem: Results<Next>!
-
+    var projectTitle:String = ""
     
     @IBOutlet weak var nextTableView: UITableView!
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//    realm browser
-    print(Realm.Configuration.defaultConfiguration.fileURL!)
+        
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
         
         
         let realm = try! Realm()
@@ -44,7 +46,7 @@ class nextMain: UIViewController, UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexpath: IndexPath)->UITableViewCell {
         
         
-        var cell: UITableViewCell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "Cell")
+        let cell: UITableViewCell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "Cell")
         
         let object = nextItem[indexpath.row]
         
@@ -54,6 +56,30 @@ class nextMain: UIViewController, UITableViewDelegate, UITableViewDataSource {
         
         
     }
+    
+    
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let object = nextItem[indexPath.row]
+        
+        projectTitle = object.projectName
+        
+        
+        performSegue(withIdentifier: "nextDetail",sender: nil)
+        
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any!) {
+        if (segue.identifier == "nextDetail") {
+            
+            let secondVC: nextDetail = (segue.destination as? nextDetail)!
+            
+            secondVC.pjName = projectTitle
+        }
+    }
+    
     
     
     //    delete

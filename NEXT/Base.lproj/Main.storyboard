@@ -206,7 +206,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="fil-ql-Awn" kind="show" id="20b-o3-pHB"/>
+                                            <segue destination="fil-ql-Awn" kind="show" identifier="nextDetail" id="20b-o3-pHB"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -243,7 +243,7 @@
         <!--NEXT TO DO-->
         <scene sceneID="2jZ-1k-Aac">
             <objects>
-                <viewController id="fil-ql-Awn" sceneMemberID="viewController">
+                <viewController id="fil-ql-Awn" customClass="nextDetail" customModule="NEXT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yzV-se-kiX">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -260,7 +260,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="74" id="eLm-u1-QeS">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="74" id="eLm-u1-QeS">
                                         <rect key="frame" x="0.0" y="28" width="414" height="74"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eLm-u1-QeS" id="HKT-sO-Oqr">
@@ -275,12 +275,20 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="fil-ql-Awn" id="Ff9-f1-vSn"/>
+                                    <outlet property="delegate" destination="fil-ql-Awn" id="cpf-IK-ZJC"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="4Ze-T5-fnS"/>
                     </view>
                     <navigationItem key="navigationItem" title="NEXT TO DO" id="F0k-jV-Hxa"/>
+                    <connections>
+                        <outlet property="nextDetailTable" destination="4qW-QM-XOT" id="Brj-wF-nx9"/>
+                        <outlet property="projectName" destination="gbS-nT-eau" id="X1a-fL-Hwj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bcQ-2H-OT1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -524,7 +532,7 @@
             </objects>
             <point key="canvasLocation" x="920" y="115"/>
         </scene>
-        <!--Idea Collection-->
+        <!--アイデア ストック-->
         <scene sceneID="a86-K5-1nB">
             <objects>
                 <viewController id="J2X-vE-bJc" customClass="ideaCollection" sceneMemberID="viewController">
@@ -557,7 +565,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="fH8-Z5-oIc"/>
                     </view>
-                    <navigationItem key="navigationItem" id="skA-fU-kIa">
+                    <navigationItem key="navigationItem" title="アイデア ストック" id="skA-fU-kIa">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="ブログを書く" id="Mae-1u-Y2M">
                             <connections>
                                 <segue destination="P4v-L4-K3h" kind="showDetail" id="PUn-zG-9Fh"/>
