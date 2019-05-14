@@ -16,10 +16,20 @@ class ideaPaint: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
-
+    
+    @IBAction func cancelBtn(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+        
+    }
+    
+    
+    @IBAction func saveBtn(_ sender: Any) {
+        
+  
+    }
+    
   
 
 }

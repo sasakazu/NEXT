@@ -11,7 +11,12 @@ import RealmSwift
 
 class Next: Object {
 
+
     @objc dynamic var projectName = ""
-    @objc dynamic var nextItem = ""
+    @objc dynamic var nextItem1 = ""
+    @objc dynamic var nextItem2 = ""
+    @objc dynamic var nextItem3 = ""
+    @objc dynamic var nextItem4 = ""
+
 
 }
