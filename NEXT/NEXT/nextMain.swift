@@ -43,6 +43,8 @@ class nextMain: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return nextItem.count
     }
     
+    
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexpath: IndexPath)->UITableViewCell {
         
         

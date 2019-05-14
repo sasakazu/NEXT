@@ -16,8 +16,6 @@ class nextDetail: UIViewController {
     
     @IBOutlet weak var projectName: UILabel!
     
-    @IBOutlet weak var nextDetailTable: UITableView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
