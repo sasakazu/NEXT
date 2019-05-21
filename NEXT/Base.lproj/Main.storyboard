@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--プロジェクトネーム追加-->
+        <!--プロジェクトネーム-->
         <scene sceneID="MSw-G7-z69">
             <objects>
                 <viewController id="Pwv-60-a21" customClass="nextAdd" customModule="NEXT" customModuleProvider="target" sceneMemberID="viewController">
@@ -61,14 +61,14 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="uGO-UI-nhK"/>
                     </view>
-                    <navigationItem key="navigationItem" title="プロジェクトネーム追加" id="g3t-CH-VP6"/>
+                    <navigationItem key="navigationItem" title="プロジェクトネーム" id="g3t-CH-VP6"/>
                     <connections>
                         <outlet property="projectNameTF" destination="qGM-OO-qQd" id="AhZ-5P-G1R"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ba2-7d-dHm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2410" y="-1280"/>
+            <point key="canvasLocation" x="2342" y="-1280"/>
         </scene>
         <!--To Do List-->
         <scene sceneID="gMA-ts-av3">
@@ -111,7 +111,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TW5-nv-dEM" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3179.7101449275365" y="-1280.3571428571429"/>
+            <point key="canvasLocation" x="3084" y="-1280"/>
         </scene>
         <!--NEXT-->
         <scene sceneID="tne-QT-ifu">
@@ -167,7 +167,7 @@
             </objects>
             <point key="canvasLocation" x="1612" y="-1280"/>
         </scene>
-        <!--NEXT TODO-->
+        <!--NEXT ToDo List-->
         <scene sceneID="2jZ-1k-Aac">
             <objects>
                 <viewController id="fil-ql-Awn" customClass="nextDetail" customModule="NEXT" customModuleProvider="target" sceneMemberID="viewController">
@@ -186,11 +186,11 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="PHw-WA-i12">
-                                <rect key="frame" x="0.0" y="191" width="414" height="622"/>
+                                <rect key="frame" x="0.0" y="202" width="414" height="611"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="414" id="Hme-Tf-bNa"/>
-                                    <constraint firstAttribute="height" constant="622" id="lgR-rC-9kY"/>
+                                    <constraint firstAttribute="height" constant="611" id="lgR-rC-9kY"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="W6P-l5-h4c">
@@ -199,6 +199,13 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="W6P-l5-h4c" id="JRw-Kl-gb1">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8QT-dg-szh">
+                                                    <rect key="frame" x="351" y="6" width="41" height="30"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <state key="normal" title="Done!"/>
+                                                </button>
+                                            </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
@@ -214,14 +221,18 @@
                             <constraint firstItem="Kgm-Wj-jsp" firstAttribute="leading" secondItem="4Ze-T5-fnS" secondAttribute="leading" constant="20" id="SpL-9u-zSv"/>
                             <constraint firstItem="PHw-WA-i12" firstAttribute="bottom" secondItem="4Ze-T5-fnS" secondAttribute="bottom" id="eAD-fx-lZi"/>
                             <constraint firstItem="4Ze-T5-fnS" firstAttribute="trailing" secondItem="Kgm-Wj-jsp" secondAttribute="trailing" constant="20" id="iVu-rX-D0w"/>
-                            <constraint firstItem="PHw-WA-i12" firstAttribute="top" secondItem="Kgm-Wj-jsp" secondAttribute="bottom" constant="37" id="tPa-hS-5da"/>
+                            <constraint firstItem="PHw-WA-i12" firstAttribute="top" secondItem="Kgm-Wj-jsp" secondAttribute="bottom" constant="48" id="tPa-hS-5da"/>
                             <constraint firstItem="PHw-WA-i12" firstAttribute="trailing" secondItem="4Ze-T5-fnS" secondAttribute="trailing" id="wDc-py-YJ0"/>
                             <constraint firstItem="PHw-WA-i12" firstAttribute="leading" secondItem="4Ze-T5-fnS" secondAttribute="leading" id="y5b-Bh-ZJp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4Ze-T5-fnS"/>
                     </view>
-                    <navigationItem key="navigationItem" title="NEXT TODO" id="F0k-jV-Hxa">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="bmn-iY-4MB"/>
+                    <navigationItem key="navigationItem" title="NEXT ToDo List" id="F0k-jV-Hxa">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="bmn-iY-4MB">
+                            <connections>
+                                <segue destination="oAm-hi-SJ2" kind="show" id="uMS-3Q-uyG"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="projectName" destination="Kgm-Wj-jsp" id="8uQ-76-jda"/>
@@ -230,7 +241,22 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bcQ-2H-OT1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1612" y="-568"/>
+            <point key="canvasLocation" x="1611.5942028985507" y="-568.52678571428567"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="rDz-hl-UVK">
+            <objects>
+                <viewController id="oAm-hi-SJ2" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bpy-6H-rEb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="uc9-uy-oi1"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IMu-yl-1bn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2342" y="-569"/>
         </scene>
         <!--Idea Paint-->
         <scene sceneID="8uU-4q-xay">

@@ -23,6 +23,10 @@ class nextDetail: UIViewController, UITableViewDataSource, UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        
+        tableview.allowsMultipleSelection = true
+        
   
         let realm = try! Realm()
         
@@ -79,8 +83,11 @@ class nextDetail: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
     }
     
+    var selectSetting: String = ""
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
+   
         
         let cell: UITableViewCell = UITableViewCell(style: UITableViewCell.CellStyle.default, reuseIdentifier: "Cell")
         
@@ -99,6 +106,7 @@ class nextDetail: UIViewController, UITableViewDataSource, UITableViewDelegate {
         cell.textLabel?.text = days.name
         
         
+    
         return cell
         
         
@@ -150,6 +158,22 @@ class nextDetail: UIViewController, UITableViewDataSource, UITableViewDelegate {
         }
     }
     
+    
+    // セルが選択された時に呼び出される
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at:indexPath)
+        
+        // チェックマークを入れる
+        cell?.accessoryType = .checkmark
+    }
+    
+    // セルの選択が外れた時に呼び出される
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at:indexPath)
+        
+        // チェックマークを外す
+        cell?.accessoryType = .none
+    }
     
     }
     
