@@ -9,56 +9,36 @@
 import UIKit
 import RealmSwift
 
-class nextAdd: UIViewController {
+class nextAdd: UIViewController, UITextFieldDelegate {
     
     
     @IBOutlet weak var projectNameTF: UITextField!
-    @IBOutlet weak var itemTF1: UITextField!
-    @IBOutlet weak var itemTF2: UITextField!
-    @IBOutlet weak var itemTF3: UITextField!
-    @IBOutlet weak var itemTF4: UITextField!
+   
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        projectNameTF.delegate = self
+        
+        print(Realm.Configuration.defaultConfiguration.fileURL!)
 
     }
     
     @IBAction func doneBtn(_ sender: Any) {
         
-        let newNext = Next()
-        
-        newNext.projectName = projectNameTF.text!
-        newNext.nextItem1 = itemTF1.text!
-        newNext.nextItem2 = itemTF2.text!
-        newNext.nextItem3 = itemTF3.text!
-        newNext.nextItem4 = itemTF4.text!
-        
-        do{
-            let realm = try Realm()
-            try realm.write({ () -> Void in
-                realm.add(newNext)
-                print("成功！！")
-                
-            })
-        }catch{
-            print("失敗！！！")
-        }
-        
-
-        
-        dismiss(animated: true, completion: nil)
-        
+    
     }
     
     
-    
-    @IBAction func cancelBtn(_ sender: Any) {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let next = segue.destination as? toDoList
+        let _ = next?.view
         
-        dismiss(animated: true, completion: nil)
-        
+        next?.reciveProject = projectNameTF.text!
     }
-    
+  
     
 
 
