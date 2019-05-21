@@ -12,6 +12,8 @@ import RealmSwift
 class nextMain: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     var projectName: Results<Next>!
+    var item: Results<Item>!
+    
     var Name:String = ""
     
     @IBOutlet weak var nextTableView: UITableView!
@@ -22,7 +24,7 @@ class nextMain: UIViewController, UITableViewDelegate, UITableViewDataSource {
         let realm = try! Realm()
         
         projectName = realm.objects(Next.self).sorted(byKeyPath: "id", ascending: true)
-        
+        item = realm.objects(Item.self)
         
         
     }
@@ -92,8 +94,15 @@ class nextMain: UIViewController, UITableViewDelegate, UITableViewDataSource {
         if(editingStyle == UITableViewCell.EditingStyle.delete) {
             do{
                 let realm = try Realm()
+                
                 try realm.write {
+                    
+            
+                  
+                    
                     realm.delete(self.projectName[indexPath.row])
+                    
+                    
                 }
                 tableView.deleteRows(at: [indexPath as IndexPath], with: UITableView.RowAnimation.fade)
                 

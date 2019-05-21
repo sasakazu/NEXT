@@ -13,6 +13,8 @@ class nextDetail: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var reciveName:String = ""
     
+//    var item:List<Item>!
+    
     
     @IBOutlet weak var projectName: UILabel!
     
@@ -105,7 +107,50 @@ class nextDetail: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     
     
-    
-    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
 
-}
+
+        if(editingStyle == UITableViewCell.EditingStyle.delete) {
+            do{
+                let realm = try Realm()
+
+                try realm.write {
+                    
+                    var users = realm.objects(Next.self).sorted(byKeyPath: "id", ascending: true)
+                    
+                    users = realm.objects(Next.self).filter("name == %@", reciveName)
+                    
+                    //        配列の最初だけをとる
+                    let u = users[0]
+                    let days = u.items
+                    
+                    
+                    
+                    
+                    
+                    realm.delete(u.items[indexPath.row])
+                
+                
+                
+                
+                }
+                
+                
+                tableView.deleteRows(at: [indexPath as IndexPath], with: UITableView.RowAnimation.fade)
+
+
+            }catch{
+
+
+
+                self.tableview.reloadData()
+                
+
+            }
+        }
+    }
+    
+    
+    }
+    
+    
