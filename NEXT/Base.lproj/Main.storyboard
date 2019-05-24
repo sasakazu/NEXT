@@ -85,7 +85,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="NEXT ToDo item" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xao-tc-C3s">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ToDo item" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xao-tc-C3s">
                                 <rect key="frame" x="20" y="224" width="374" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
@@ -199,17 +199,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="W6P-l5-h4c" id="JRw-Kl-gb1">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8QT-dg-szh">
-                                                    <rect key="frame" x="351" y="6" width="41" height="30"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <state key="normal" title="Done!"/>
-                                                </button>
-                                            </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="doneBtn" destination="8QT-dg-szh" id="e1O-LC-RTL"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -233,7 +223,7 @@
                     <navigationItem key="navigationItem" title="NEXT ToDo List" id="F0k-jV-Hxa">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="bmn-iY-4MB">
                             <connections>
-                                <segue destination="oAm-hi-SJ2" kind="show" id="uMS-3Q-uyG"/>
+                                <segue destination="oAm-hi-SJ2" kind="show" identifier="go" id="uMS-3Q-uyG"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -246,20 +236,48 @@
             </objects>
             <point key="canvasLocation" x="1611.5942028985507" y="-568.52678571428567"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Item-->
         <scene sceneID="rDz-hl-UVK">
             <objects>
-                <viewController id="oAm-hi-SJ2" sceneMemberID="viewController">
+                <viewController id="oAm-hi-SJ2" customClass="addItem" customModule="NEXT" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bpy-6H-rEb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="ToDo item" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nPa-s4-58U">
+                                <rect key="frame" x="20" y="226" width="374" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TODO List:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cP0-Fg-lSe">
+                                <rect key="frame" x="22" y="174" width="89" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VmV-of-fQo">
+                                <rect key="frame" x="168" y="340" width="78" height="58"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="38"/>
+                                <state key="normal" title="Add!"/>
+                                <connections>
+                                    <action selector="addItem:" destination="oAm-hi-SJ2" eventType="touchUpInside" id="fEE-wo-dCl"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="uc9-uy-oi1"/>
                     </view>
+                    <connections>
+                        <outlet property="addTF" destination="nPa-s4-58U" id="DMt-ym-Ved"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IMu-yl-1bn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2342" y="-569"/>
+            <point key="canvasLocation" x="2339.130434782609" y="-569.19642857142856"/>
         </scene>
         <!--Idea Paint-->
         <scene sceneID="8uU-4q-xay">

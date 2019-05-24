@@ -13,9 +13,7 @@ class nextDetail: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var reciveName:String = ""
     
-//    var item:List<Item>!
-    
-    
+
     @IBOutlet weak var projectName: UILabel!
     
     @IBOutlet weak var tableview: UITableView!
@@ -151,6 +149,15 @@ class nextDetail: UIViewController, UITableViewDataSource, UITableViewDelegate {
             }
         }
     }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let next = segue.destination as? addItem
+        let _ = next?.view
+        
+        next?.reciveItem = reciveName
+    }
+    
     
     
   

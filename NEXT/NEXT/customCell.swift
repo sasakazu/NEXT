@@ -10,9 +10,8 @@ import UIKit
 
 class customCell: UITableViewCell {
     
-    @IBOutlet weak var doneBtn: UIButton!
+    @IBOutlet weak var swichBtn: UISwitch!
     
-
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -25,6 +25,7 @@
 		7300B8962287D9C400BD6FA9 /* object.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7300B8952287D9C400BD6FA9 /* object.swift */; };
 		730F935922953A9D00063498 /* customCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730F935822953A9D00063498 /* customCell.swift */; };
 		73B349A32293E51500E84535 /* toDoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B349A22293E51500E84535 /* toDoList.swift */; };
+		73EA82F12297D0C80004553F /* addItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73EA82F02297D0C80004553F /* addItem.swift */; };
 		B3B1D04BCAB7609A3D366FDE /* Pods_NEXTUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 970CEA5A5EF7CA781FE3AA1A /* Pods_NEXTUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +74,7 @@
 		7300B8952287D9C400BD6FA9 /* object.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = object.swift; sourceTree = "<group>"; };
 		730F935822953A9D00063498 /* customCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = customCell.swift; sourceTree = "<group>"; };
 		73B349A22293E51500E84535 /* toDoList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = toDoList.swift; path = NEXT/NEXT/toDoList.swift; sourceTree = SOURCE_ROOT; };
+		73EA82F02297D0C80004553F /* addItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addItem.swift; sourceTree = "<group>"; };
 		970CEA5A5EF7CA781FE3AA1A /* Pods_NEXTUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NEXTUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A9F2113A134BCD732F79F21 /* Pods-NEXT.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NEXT.release.xcconfig"; path = "Target Support Files/Pods-NEXT/Pods-NEXT.release.xcconfig"; sourceTree = "<group>"; };
 		C5C8ECC6F6AE7DC4DD59719C /* Pods_NEXT.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NEXT.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -184,6 +186,7 @@
 				7300B8862287D36D00BD6FA9 /* nextAdd.swift */,
 				73B349A22293E51500E84535 /* toDoList.swift */,
 				730F935822953A9D00063498 /* customCell.swift */,
+				73EA82F02297D0C80004553F /* addItem.swift */,
 				7300B8882287D3AD00BD6FA9 /* nextDetail.swift */,
 			);
 			path = NEXT;
@@ -458,6 +461,7 @@
 				73B349A32293E51500E84535 /* toDoList.swift in Sources */,
 				7300B8892287D3AD00BD6FA9 /* nextDetail.swift in Sources */,
 				7300B81C2285350300BD6FA9 /* ViewController.swift in Sources */,
+				73EA82F12297D0C80004553F /* addItem.swift in Sources */,
 				7300B8912287D58F00BD6FA9 /* ideaPaint.swift in Sources */,
 				7300B81A2285350300BD6FA9 /* AppDelegate.swift in Sources */,
 				7300B8852287D33700BD6FA9 /* nextMain.swift in Sources */,
